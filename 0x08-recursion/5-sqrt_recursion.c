@@ -1,25 +1,21 @@
 #include "main.h"
 
 /**
- * _pow_recursion - To returns the value of x raised to the power of y
- * @x: The value of X
- * @y: The value of Y
- * Return: -1 Success
+ * mainsqrt - To find the natural square root of a number
+ * @n: The value for square root calculation
+ * @i: iteration value
+ * Return: the resulting square root
  */
 
-int _pow_recursion(int x, int y)
+int mainsqrt(int n, int i)
 {
-	if (y < 0)
-	{
-		return (-1);
-	}
-	else if (y == 0)
-	{
-		return (1);
-	}
-	else
-	{
-		return (x * _pow_recursion(x, y - 1));
-	}
+		if (i * i > n)
+		{
+			return (-1);
+		}
+		if (i * i == n)
+		{
+			return (i);
+		}
+		return (mainsqrt(n, i + 1));
 }
-
